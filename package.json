@@ -1,0 +1,20 @@
+{
+  "name": "frogge",
+  "version": "1.0.0",
+  "description": "An e-commerce website built using React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nle641999/Frogge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nle641999/Frogge/issues"
+  },
+  "homepage": "https://github.com/nle641999/Frogge#readme"
+}
