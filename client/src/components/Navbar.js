@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -47,7 +48,7 @@ function NavBar() {
           <Nav className="ms-auto" defaultActiveKey="#cart">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Cart
+                <AiOutlineShoppingCart style={{ marginBottom: "2px" }} /> Cart
               </Nav.Link>
             </Nav.Item>
 
