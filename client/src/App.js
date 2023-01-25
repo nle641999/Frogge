@@ -1,4 +1,10 @@
+import React, {useState, useEffect} from 'react';
 import logo from './logo.svg';
+import Home from './pages/Home';
+import Cart from './pages/Cart';
+import Contact from './pages/Contact';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 import './App.css';
 
 function App() {
