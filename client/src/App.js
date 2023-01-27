@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import Home from './pages/Home';
-import Cart from './pages/Cart';
-import Contact from './pages/Contact';
+import Home from './components/Navbar/Home.js';
+import Cart from './components/Navbar/Cart.js';
+import Contact from './components/Navbar/Contact.js';
 import Footer from './components/Footer';
-import Navbar from './components/Navbar';
+import Navbar from './components/pages/Navbar';
 import './App.css';
 
 function App() {
