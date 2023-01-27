@@ -1,4 +1,4 @@
-# Frogge Inc. ![frogge](./client/src/assets/logo.png)
+# Frogge Inc. ![frogge](./images/logo.png)
 
 ## Welcome to the Frogge merch website!
 

@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/nle641999/Frogge/issues"
   },
-  "homepage": "https://github.com/nle641999/Frogge#readme"
+  "homepage": "https://github.com/nle641999/Frogge#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
 }
