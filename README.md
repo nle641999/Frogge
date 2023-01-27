@@ -1,6 +1,7 @@
 # Frogge Inc. ![frogge](./images/logo.png)
 
 ## Welcome to the Frogge merch website!
+Website deployed on [HEROKU!](https://frogge-e-commerce.herokuapp.com/)
 
 This website was built using React, Node.js, and Express. The application will allows users to scroll through a list of merchandise and add items to their cart. They can then open up their cart to see the subtotal of the products added, and then proceed to checkout, powered by Stripe, to finalize their order. There are a total of 5 pages: Home, Cart, Contact, Checkout, and a landing page. 
 
