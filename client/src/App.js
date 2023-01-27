@@ -11,7 +11,7 @@ import { setContext } from '@apollo/client/link/context';
 import Home from './components/Navbar/Home.js';
 import Cart from './components/Navbar/Cart.js';
 import Contact from './components/Navbar/Contact.js';
-import Footer from './components/Footer';
+import Footer from './components/Footer.js';
 import Navbar from './components/pages/Navbar';
 import './App.css';
 
@@ -45,6 +45,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer/>
         </div>
     </Router>
     </ApolloProvider>
