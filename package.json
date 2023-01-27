@@ -23,5 +23,9 @@
   "homepage": "https://github.com/nle641999/Frogge#readme",
   "devDependencies": {
     "concurrently": "^7.6.0"
+  },
+  "dependencies": {
+    "apollo-link": "^1.2.14",
+    "apollo-link-context": "^1.0.20"
   }
 }
