@@ -4,13 +4,14 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
+
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-
+import Product from './components/pages/singleProduct';
 import Home from './components/Navbar/Home.js';
 import Cart from './components/Navbar/Cart.js';
-import Contact from './components/Navbar/Contact.js';
+import Contact from './components/pages/Contact.js';
 import Footer from './components/Footer.js';
 import Navbar from './components/pages/Navbar';
 import './App.css';
@@ -44,6 +45,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/product/:productId" element={<Product />} />
         </Routes>
         <Footer/>
         </div>

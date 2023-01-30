@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { useLazyQuery } from '@apollo/client';
 import { QUERY_CHECKOUT } from '../../utils/queries.js';
-import { idbPromise } from '../../utils/helpers';
+// import { idbPromise } from '../../utils/helpers';
 import CartItem from './CartItem';
 import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
@@ -23,16 +23,16 @@ const Cart = () => {
     }
   }, [data]);
 
-  useEffect(() => {
-    async function getCart() {
-      const cart = await idbPromise('cart', 'get');
-      dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
-    }
+  // useEffect(() => {
+  //   async function getCart() {
+  //     const cart = await idbPromise('cart', 'get');
+  //     dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
+  //   }
 
-    if (!state.cart.length) {
-      getCart();
-    }
-  }, [state.cart.length, dispatch]);
+  //   if (!state.cart.length) {
+  //     getCart();
+  //   }
+  // }, [state.cart.length, dispatch]);
 
   function toggleCart() {
     dispatch({ type: TOGGLE_CART });
