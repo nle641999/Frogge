@@ -1,12 +1,12 @@
 import React from 'react';
 import '../../styles/Main.css';
 import { useQuery } from '@apollo/client';
-import { QUERY_PRODUCT } from '../../utils/queries';
+import { QUERY_PRODUCTS } from '../../utils/queries';
 import { useParams } from 'react-router-dom';
 
 function SingleProduct() {
   const { productId }=useParams()
-  const { loading, data }=useQuery(QUERY_PRODUCT, {
+  const { loading, data }=useQuery(QUERY_PRODUCTS, {
     variables: {
       id: productId
     }
