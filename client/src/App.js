@@ -9,11 +9,13 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import SingleProduct from './components/SingleProduct/singleProduct';
+import Navbar from './components/Navbar.js';
 import Home from './components/Homepage/homepage.js';
 import Cart from './components/Cart/Cart.js';
 import Contact from './components/Contact/Contact.js';
 import Footer from './components/Footer.js';
-import Navbar from './components/Navbar.js';
+
+import "./style.css";
 import './App.css';
 
 const httpLink = createHttpLink({
