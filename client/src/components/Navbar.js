@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
-import { AiOutlineHome, AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
+import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -29,7 +29,7 @@ function NavBar() {
         {/* insert brand logo below in img src */}
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img src = "../../images/logo.png" alt="logo" />
+          <img src = "../assets/logo.png" alt="logo" />
         </Navbar.Brand>
 
         <Navbar.Toggle

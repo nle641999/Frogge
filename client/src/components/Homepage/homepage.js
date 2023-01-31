@@ -20,8 +20,8 @@ return (
             </h1>
 
             <h1 className="heading-name">
-              I'M
-              <strong className="main-name"> NICHOLAS LE</strong>
+              We're
+              <strong className="main-name"> FROGGE Inc.</strong>
             </h1>
           </Col>
 

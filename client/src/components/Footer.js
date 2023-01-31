@@ -9,7 +9,7 @@ function Footer() {
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>© {year} Frogge</h3>
+          <h3>© {year} Frogge Inc.</h3>
         </Col>
         <Col md="4" className="footer-copywright">
 
@@ -19,7 +19,7 @@ function Footer() {
             <li className="social-icons">
               <a
                 href="https://github.com/nle641999/Frogge"
-                style={{ color: "green" }}
+                style={{ color: "#8cb288" }}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -30,7 +30,7 @@ function Footer() {
             <li className="social-icons">
               <a
                 href="https://frogge-e-commerce.herokuapp.com/contact"
-                style={{ color: "green" }}
+                style={{ color: "#8cb288" }}
                 target="_blank"
                 rel="noopener noreferrer"
               >
