@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineHome, AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -26,10 +26,10 @@ function NavBar() {
       expand="md"
       className={navColour ? "sticky" : "navbar"}
     >
-        {/* insert brand logo here */}
+        {/* insert brand logo below in img src */}
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img src = "./assets/logo.png" alt="logo" />
+          <img src = "../../images/logo.png" alt="logo" />
         </Navbar.Brand>
 
         <Navbar.Toggle
@@ -42,12 +42,27 @@ function NavBar() {
           <span></span>
           <span></span>
 
-{/*  shopping cart tab */}
+{/*  navbar links */}
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto" defaultActiveKey="#cart">
+          <Nav className="ms-auto" defaultActiveKey="#contact">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+              <Nav.Link
+                as={Link}
+                to="/contact"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> Contact
+              </Nav.Link>
+            </Nav.Item>
+
+{/* cart link */}
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/Cart"
+                onClick={() => updateExpanded(false)}
+              >
                 <AiOutlineShoppingCart style={{ marginBottom: "2px" }} /> Cart
               </Nav.Link>
             </Nav.Item>

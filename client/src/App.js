@@ -8,12 +8,12 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import Product from './components/pages/singleProduct';
-import Home from './components/Navbar/Home.js';
-import Cart from './components/Navbar/Cart.js';
-import Contact from './components/pages/Contact.js';
+import SingleProduct from './components/SingleProduct/singleProduct';
+import Home from './components/Homepage/homepage.js';
+import Cart from './components/Cart/Cart.js';
+import Contact from './components/Contact/Contact.js';
 import Footer from './components/Footer.js';
-import Navbar from './components/pages/Navbar';
+import Navbar from './components/Navbar.js';
 import './App.css';
 
 const httpLink = createHttpLink({
@@ -45,7 +45,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/product/:productId" element={<Product />} />
+          <Route path="/product/:productId" element={<SingleProduct />} />
         </Routes>
         <Footer/>
         </div>
