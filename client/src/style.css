@@ -212,7 +212,7 @@ NAVBAR STYLING
     .navbar {
       padding: 1rem 2rem !important;
       font-size: 1.4rem !important;
-      background-color: #181a27 !important;
+      background-color: #d2e7cf !important;
     }
   
     .navbar-nav .nav-item a::after {
@@ -295,4 +295,12 @@ FOOTER STYLING
     font-size: 2.3em !important;
     font-weight: 500 !important;
     padding-top: 10px !important;
+  }
+
+  .footer-copyright {
+    background-color: #8cb288 !important;
+    color: #8cb288 !important;
+    padding: 1rem 0 !important;
+    font-size: 1.2rem !important;
+    text-align: center !important;
   }
