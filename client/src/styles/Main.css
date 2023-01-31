@@ -1,0 +1,21 @@
+h1 {
+  padding: 20px;
+  margin-left: 12px;
+  font-family: Helvetica, arial, sans-serif;
+  font-weight: bold;
+}
+
+.mainText {
+  margin-left: 32px;
+  margin-right: 32px;
+  font-family: Helvetica, arial, sans-serif;
+}
+
+h5, h2 {
+  font-family: Helvetica, arial, sans-serif;
+}
+
+#fields {
+  margin-left: 32px;
+  margin-right: 32px;
+}
