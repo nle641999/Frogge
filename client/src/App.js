@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import { StoreProvider} from './utils/GlobalState'
 import SingleProduct from './components/SingleProduct/singleProduct';
 import Navbar from './components/Navbar.js';
 import Home from './components/Homepage/homepage.js';
@@ -42,14 +42,16 @@ function App() {
     <ApolloProvider client={client}>
     <Router>
     <div>
+      <StoreProvider>
       <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/product/:productId" element={<SingleProduct />} />
+          {/* <Route path="/contact" element={<Contact />} />
+          <Route path="/product/:productId" element={<SingleProduct />} /> */}
         </Routes>
         <Footer/>
+        </StoreProvider>
         </div>
     </Router>
     </ApolloProvider>
