@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "apollo-link": "^1.2.14",
-    "apollo-link-context": "^1.0.20"
+    "apollo-link-context": "^1.0.20",
+    "jwt-decode": "^3.1.2"
   }
 }
