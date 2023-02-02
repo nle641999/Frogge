@@ -222,7 +222,15 @@ CART STYLING
 /* ------------
 NAVBAR STYLING
 --------------- */
-
+.logo{
+  font-size: 2.5em !important;
+  font-weight: 600 !important;
+  color: #8cb288 !important;
+  padding-left: 3rem !important;
+  padding-right: 10px !important;
+  padding-bottom: 0rem;
+  padding-top: 0rem;
+}
 .sticky {
   background-color: #1b1a2ea9 !important;
   transition: all 0.3s ease-out 0s !important;
@@ -358,37 +366,19 @@ NAVBAR STYLING
 /* ------------
 FOOTER STYLING
 --------------- */
-.btn-primary:hover {
-  color: white !important;
-  background-color: #2327f0 !important;
-  border-color: #6d20c5d7 !important;
-}
-
-.btn:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-.footer-body {
-  color: white !important;
-  padding: 0rem 10 !important;
-  font-size: 1.5rem !important;
-  text-align: right;
-}
-
 .footer {
-  background-color: #dbfcd8;
+  background-color: #dbfcd8 !important;
   color: #8cb288 !important;
   padding: 1rem 0 !important;
   font-size: 1.2rem !important;
   text-align: center !important;
 }
 
-.project-heading {
+.footer-body {
   color: white !important;
-  font-size: 2.3em !important;
-  font-weight: 300 !important;
-  padding-top: 10px !important;
+  padding: 0rem 10 !important;
+  font-size: 1.98rem !important;
+  text-align: right !important;
 }
 
 .footer-copyright {

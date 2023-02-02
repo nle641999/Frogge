@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import { NavbarBrand } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
 import Cart from "./Cart/Cart.js";
 
@@ -32,7 +33,7 @@ function NavBar() {
       >
         <Container>
           <NavbarBrand href="/" className="d-flex">
-            <img src = "./images/logo.png" alt="logo" />
+            <img src={logo} className="img-fluid logo" alt="brand"/>
           </NavbarBrand>
 
           <Navbar.Toggle
