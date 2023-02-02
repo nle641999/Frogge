@@ -15,7 +15,7 @@ import Cart from './components/Cart/Cart.js';
 import Contact from './components/Contact/Contact.js';
 import Footer from './components/Footer.js';
 
-import "./style.css";
+import "./styles/style.css";
 import './App.css';
 
 const httpLink = createHttpLink({
@@ -46,9 +46,8 @@ function App() {
       <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
-          {/* <Route path="/contact" element={<Contact />} />
-          <Route path="/product/:productId" element={<SingleProduct />} /> */}
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/product/:productId" element={<SingleProduct />} />
         </Routes>
         <Footer/>
         </StoreProvider>

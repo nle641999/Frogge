@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import { NavbarBrand } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
@@ -30,9 +31,9 @@ function NavBar() {
         className={navColour ? "sticky" : "navbar"}
       >
         <Container>
-          <Navbar.Brand href="/" className="d-flex">
-            <img src = "../assets/logo.png" alt="logo" />
-          </Navbar.Brand>
+          <NavbarBrand href="/" className="d-flex">
+            <img src = "./images/logo.png" alt="logo" />
+          </NavbarBrand>
 
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
@@ -59,7 +60,7 @@ function NavBar() {
 
               <Nav.Item>
                 <Nav.Link onClick={() => setShowCart(true)}>
-                  <AiOutlineShoppingCart style={{ marginBottom: "2px" }} /> Cart
+                  <AiOutlineShoppingCart style={{ marginBottom: "2px" }} /> 
                 </Nav.Link>
               </Nav.Item>
             </Nav>
