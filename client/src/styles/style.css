@@ -172,6 +172,8 @@ CART STYLING
 .cart-close-button {
   background-color: transparent;
   box-shadow: none;
+  width: 65%;
+  height: 100%;
   border: none;
   color: inherit;
   cursor: pointer;
@@ -198,8 +200,6 @@ CART STYLING
   position: absolute;
   top: 0;
   right: 0;
-  transition: all 2.0s ease;
-
 }
 
 .cart-header .cart-close {
@@ -209,14 +209,6 @@ CART STYLING
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-
-.cart-header .cart-close:hover {
-  background-color: lightblue;
-}
-
-.cart-header .cart-close:active {
-  background-color: navy;
 }
 
 /* ------------
@@ -300,7 +292,7 @@ NAVBAR STYLING
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: #d2e7cf !important;
+    background-color: #c0f1bb !important;
   }
 
   .navbar-nav .nav-item a::after {
@@ -315,6 +307,7 @@ NAVBAR STYLING
 .logo {
   height: 1.4em !important;
   width: 2.5em !important;
+  text-align: center !important;
 }
 
 .navbar-nav .nav-link {
@@ -367,24 +360,38 @@ NAVBAR STYLING
 FOOTER STYLING
 --------------- */
 .footer {
-  background-color: #dbfcd8 !important;
-  color: #8cb288 !important;
-  padding: 1rem 0 !important;
-  font-size: 1.2rem !important;
+  background-color: #c0f1bb;
+  bottom: 0 !important;
+  padding-top: 10px !important;
+  padding-bottom: 8px !important ;
+}
+.footer-copywright {
   text-align: center !important;
 }
 
 .footer-body {
-  color: white !important;
-  padding: 0rem 10 !important;
-  font-size: 1.98rem !important;
-  text-align: right !important;
+  z-index: 1;
+  text-align: center !important;
 }
 
-.footer-copyright {
-  background-color: #8cb288 !important;
-  color: #8cb288 !important;
-  padding: 1rem 0 !important;
-  font-size: 1.2rem !important;
-  text-align: center !important;
+@media (max-width: 767px) {
+  .footer-copywright {
+    text-align: center !important;
+  }
+
+  .footer-body {
+    text-align: right !important;
+  }
+}
+
+.footer h3 {
+  font-size: 1em;
+  color: rgb(0, 0, 0) !important;
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+.footer-icons {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+  padding: 1 !important;
 }
