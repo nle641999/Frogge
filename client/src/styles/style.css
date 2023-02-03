@@ -214,7 +214,7 @@ CART STYLING
 /* ------------
 NAVBAR STYLING
 --------------- */
-.logo{
+.logo {
   font-size: 2.5em !important;
   font-weight: 600 !important;
   color: #8cb288 !important;
@@ -223,6 +223,7 @@ NAVBAR STYLING
   padding-bottom: 0rem;
   padding-top: 0rem;
 }
+
 .sticky {
   background-color: #1b1a2ea9 !important;
   transition: all 0.3s ease-out 0s !important;
@@ -363,8 +364,9 @@ FOOTER STYLING
   background-color: #c0f1bb;
   bottom: 0 !important;
   padding-top: 10px !important;
-  padding-bottom: 8px !important ;
+  padding-bottom: 8px !important;
 }
+
 .footer-copywright {
   text-align: center !important;
 }
@@ -390,6 +392,7 @@ FOOTER STYLING
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
+
 .footer-icons {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
