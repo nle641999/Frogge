@@ -60,7 +60,7 @@ function ProductItem({item}) {
         <Card.Text>
           {item.description}{item.sku}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="success">Add to Cart</Button>
       </Card.Body>
     </Card>
       </div>

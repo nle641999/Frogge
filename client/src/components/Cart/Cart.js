@@ -113,6 +113,7 @@ import CartItem from './CartItem';
 import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState.js';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import '../../styles/Cart.css';
 
 const Cart = ({showCart, setShowCart}) => {
   const [state, dispatch] = useStoreContext();
@@ -178,7 +179,7 @@ const Cart = ({showCart, setShowCart}) => {
 
           </ul>
           <div className="cart-footer">
-            <button className="btn btn-primary" onClick={handleCheckout}>
+            <button className="btn btn-success" onClick={handleCheckout}>
               Checkout
             </button>
             <p>
