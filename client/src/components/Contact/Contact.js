@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../styles/Main.css';
 import '../../styles/Contact.css';
+import { Container } from 'react-bootstrap';
 
 import { validateEmail } from '../../utils/helpers';
 
@@ -49,7 +50,10 @@ function Contact() {
   };
 
   return (
-    <div>
+    <>
+    <Container 
+     expand="md"
+    >
       <br></br>
       <br></br>
       <br></br>
@@ -94,7 +98,8 @@ function Contact() {
           <p className="error-text">{errorMessage}</p>
         </div>
       )}
-    </div>
+    </Container>
+    </>
   );
 }
 

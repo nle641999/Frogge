@@ -8,7 +8,6 @@ function Footer() {
   let date = new Date();
   let year = date.getFullYear();
   return (
-   
     <Container fluid className="border-top fixed-bottom">
       <Row>
       <Col md="4" className="footer-copywright">
@@ -45,6 +44,7 @@ function Footer() {
         </Col>
       </Row>
     </Container>
+
   );
 }
 

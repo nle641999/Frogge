@@ -7,6 +7,7 @@ import { idbPromise } from "../../utils/helpers";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../../styles/home.css';
+
 function ProductItem({item}) {
 //   const [state, dispatch] = useStoreContext();
 
