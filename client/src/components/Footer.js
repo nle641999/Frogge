@@ -8,10 +8,11 @@ function Footer() {
   let date = new Date();
   let year = date.getFullYear();
   return (
-    <Container fluid className="border-top">
+   
+    <Container fluid className="border-top fixed-bottom">
       <Row>
       <Col md="4" className="footer-copywright">
-          <h4>© Frogge Inc.</h4>
+          <h5>© Frogge Inc.</h5>
         </Col>
         <Col md="4" className="footer-copywright">
           <h3></h3>
