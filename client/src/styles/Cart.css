@@ -1,0 +1,41 @@
+.cart-close-button {
+  background-color: transparent;
+  box-shadow: none;
+  width: 65%;
+  height: 100%;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-close-button:hover {
+  color: #00bfff;
+}
+
+.cart-close-button:active {
+  color: #0077be;
+}
+
+.cart-preview {
+  background-color: white;
+  box-shadow: 0 0 10px black;
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.cart-header .cart-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

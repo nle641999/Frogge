@@ -1,18 +1,20 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import {AiFillGithub, AiFillContacts} from "react-icons/ai";
+import {AiFillGithub} from "react-icons/ai";
+import {FaUser} from "react-icons/fa";
+import "../styles/Footer.css";
 
 function Footer() {
   let date = new Date();
   let year = date.getFullYear();
   return (
-    <Container fluid className="footer">
+    <Container fluid className="border-top">
       <Row>
-        <Col md="4" className="footer-copywright">
-          <h5>© {year} Frogge Inc.</h5>
+      <Col md="4" className="footer-copywright">
+          <h5>© Frogge Inc.</h5>
         </Col>
         <Col md="4" className="footer-copywright">
-
+          <h3></h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
@@ -34,7 +36,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <AiFillContacts />
+                <FaUser />
               </a>
             </li>
 
