@@ -4,6 +4,7 @@ import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import { Container, Row, Col } from 'react-bootstrap';
 
 function ProductItem({item}) {
 //   const [state, dispatch] = useStoreContext();
@@ -42,18 +43,20 @@ function ProductItem({item}) {
 //   }
 
   return (
-     <div className="container">
-     <div className="col-sm-3">
-         <div className="card">
-             <img className="card-img-top img-fluid" src="//placehold.it/500x200" alt="Card image cap"/>
-             <div className="card-block">
-                 <h4 className="card-title">{item.name}</h4>
-                 <p className="card-text">asss</p>
-             <p className="card-text"><small className="text-muted">fasjdkkld</small></p>
-             </div>
-     </div>
- </div>
-</div>
+    <Container>
+      <Row>
+        <Col>
+          <img className="card-img-top img-fluid" src="//placehold.it/500x200" alt="Card image cap"/>
+          <h4 className="card-title">{item.name}</h4>
+          <p className="card-text">${item.price}</p>
+          <button class="btn btn-success flex-shrink-0" type="button">
+          <i className="bi-cart-fill me-1"></i>
+          Add to Cart
+          </button>
+        </Col>
+      </Row>
+    </Container>
+
   );
 }
 

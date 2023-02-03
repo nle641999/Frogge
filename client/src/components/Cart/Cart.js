@@ -178,7 +178,7 @@ const Cart = ({showCart, setShowCart}) => {
 
           </ul>
           <div className="cart-footer">
-            <button className="btn btn-primary" onClick={handleCheckout}>
+            <button className="btn btn-success" onClick={handleCheckout}>
               Checkout
             </button>
             <p>
