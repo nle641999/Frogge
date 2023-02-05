@@ -8,6 +8,7 @@ const productSchema = new Schema({
     required: true,
     trim: true
   },
+  // sku: ''
   description: {
     type: String
   },

@@ -11,11 +11,13 @@ function ProductItem({item}) {
 //   const [state, dispatch] = useStoreContext();
 
   const {
+    _id,
     sku,
     description,
     name,
     price,
-    quantity
+    quantity,
+    image
   } = item;
 
   console.log('item in ProductItem', item)
@@ -44,24 +46,16 @@ function ProductItem({item}) {
 //   }
 
   return (
-      <div className="col-3 clothe-card">
+<div className="col-3 clothe-card">
 
-         {/* <div className="card">
-             <img className="card-img-top img-fluid" src="//placehold.it/500x200" alt="Card image cap"/>
-             <div className="card-block">
-                 <h4 className="card-title">{item.name}</h4>
-                 <p className="card-text">asss</p>
-             <p className="card-text"><small className="text-muted">fasjdkkld</small></p>
-             </div> */}
- <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>{item.name}</Card.Title>
-        <Card.Text>
-          {item.description}{item.sku}
-        </Card.Text>
-        <Button variant="success">Add to Cart</Button>
-      </Card.Body>
+ <Card className="card"style={{ width: '18rem' }}>
+      <Card.Img variant="top" className="clotheImg"src={require(`../../../public/images/${item.image}`)} />
+      <Link to={`/product/${item._id}`}>
+      <div className='image_overlay image_overlay_blur'>
+            <h2 className='image_title'>{item.name}</h2>
+            <p className='image_description'>{item.description}</p>
+        </div>
+      </Link>
     </Card>
       </div>
   );

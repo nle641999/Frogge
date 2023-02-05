@@ -22,7 +22,7 @@ db.once('open', async () => {
       sku: '49856',
       description:
         'Round neck tee in black. Features a print design of green squares simulating paint strokes.  100% cotton',
-      image: 'black-shirt-squares.png',
+      image: 'black-shirt-squares',
       category: categories[0]._id,
       price: 55.00,
       quantity: 500
