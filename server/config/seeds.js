@@ -62,7 +62,7 @@ db.once('open', async () => {
       sku: '49860',
       description:
         'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
-      image: 'yellow-t-shirt.png',
+      image: 'yellow-t-shirt-2.png',
       category: categories[0]._id,
       price: 45.00,
       quantity: 210
@@ -72,7 +72,7 @@ db.once('open', async () => {
       sku: '49861',
       description:
         'Round neck tee in solid pink color. Designed for extra comfort.  100% cotton',
-      image: 'pink-t-shirt.png',
+      image: 'pink-t-shirt-2.png',
       category: categories[0]._id,
       price: 45.00,
       quantity: 275
