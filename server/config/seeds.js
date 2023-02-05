@@ -102,41 +102,81 @@ db.once('open', async () => {
       sku: '49860',
       description:
         'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
-      image: 'frog1.png',
+      image: 'frog2.png',
       category: categories[0]._id,
       price: 45.00,
       quantity: 210
     },
     {
-      name: 'Frog Hoodie',
-      sku: '49861',
+      name: 'Frog Frog Hoodie',
+      sku: '49860',
       description:
-        'Round neck tee in solid pink color. Designed for extra comfort.  100% cotton',
-      image: 'frog-hoodie.png',
+        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
+      image: 'frog-hoodie2.png',
       category: categories[0]._id,
       price: 45.00,
-      quantity: 275
+      quantity: 210
     },
     {
       name: 'Frog Tee',
-      sku: '49861',
+      sku: '49860',
       description:
-        'Round neck tee in solid pink color. Designed for extra comfort.  100% cotton',
-      image: 'frog-t-shirt.png',
+        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
+      image: 'frog-t-shirt2.png',
       category: categories[0]._id,
       price: 45.00,
-      quantity: 275
+      quantity: 210
     },
     {
       name: 'Frog Black Sweater',
-      sku: '49861',
+      sku: '49860',
       description:
-        'Round neck tee in solid pink color. Designed for extra comfort.  100% cotton',
-      image: 'frog-sweater.png',
+        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
+      image: 'frog-sweater2.png',
       category: categories[0]._id,
       price: 45.00,
-      quantity: 275
+      quantity: 210
     }
+    // {
+    //   name: 'Frog Handkerchief',
+    //   sku: '49860',
+    //   description:
+    //     'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
+    //   image: 'frog1.png',
+    //   category: categories[0]._id,
+    //   price: 45.00,
+    //   quantity: 210
+    // },
+    // {
+    //   name: 'Frog Hoodie',
+    //   sku: '49861',
+    //   description:
+    //     'Round neck tee in solid pink color. Designed for extra comfort.  100% cotton',
+    //   image: 'frog-hoodie.png',
+    //   category: categories[0]._id,
+    //   price: 45.00,
+    //   quantity: 275
+    // },
+    // {
+    //   name: 'Frog Tee',
+    //   sku: '49861',
+    //   description:
+    //     'Round neck tee in solid pink color. Designed for extra comfort.  100% cotton',
+    //   image: 'frog-t-shirt.png',
+    //   category: categories[0]._id,
+    //   price: 45.00,
+    //   quantity: 275
+    // },
+    // {
+    //   name: 'Frog Black Sweater',
+    //   sku: '49861',
+    //   description:
+    //     'Round neck tee in solid pink color. Designed for extra comfort.  100% cotton',
+    //   image: 'frog-sweater.png',
+    //   category: categories[0]._id,
+    //   price: 45.00,
+    //   quantity: 275
+    // }
   ]);
 
   await User.deleteMany();
