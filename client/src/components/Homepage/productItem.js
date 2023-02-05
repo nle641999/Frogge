@@ -46,7 +46,7 @@ function ProductItem({item}) {
 //   }
 
   return (
-<div className="col-3 clothe-card">
+<div className="col-sm-8 col-md-6 col-lg-3 clothe-card cardAll">
 
  <Card className="card"style={{ width: '18rem' }}>
       <Card.Img variant="top" className="clotheImg"src={require(`../../../public/images/${item.image}`)} />
@@ -57,6 +57,16 @@ function ProductItem({item}) {
         </div>
       </Link>
     </Card>
+    <Card.Text>
+          {item.name}
+          <br></br>
+          <br></br>
+          Sku: {item._id}
+          <br></br>
+          <br></br>
+          ${item.price}.00
+        </Card.Text>
+        <Button variant="success">Add to Cart</Button>
       </div>
   );
 }
