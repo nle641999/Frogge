@@ -21,7 +21,7 @@ db.once('open', async () => {
       name: 'Frog Handkerchief',
       sku: '49860',
       description:
-        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
+        'Handkerchief in lime green color. Frog print in dark green.  100% cotton',
       image: 'frog2.png',
       category: categories[0]._id,
       price: 45.00,
@@ -31,7 +31,7 @@ db.once('open', async () => {
       name: 'Frog Frog Hoodie',
       sku: '49860',
       description:
-        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
+        'Hoodie in solid green color. Designed for extra comfort.  100% cotton',
       image: 'frog-hoodie2.png',
       category: categories[0]._id,
       price: 45.00,
@@ -41,7 +41,7 @@ db.once('open', async () => {
       name: 'Frog Tee',
       sku: '49860',
       description:
-        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
+        'Round neck tee in solid grey color. Designed for extra comfort.  100% cotton',
       image: 'frog-t-shirt2.png',
       category: categories[0]._id,
       price: 45.00,
@@ -51,7 +51,7 @@ db.once('open', async () => {
       name: 'Frog Black Sweater',
       sku: '49860',
       description:
-        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
+        'Round neck sweater in black color. Designed for extra comfort.  100% cotton',
       image: 'frog-sweater2.png',
       category: categories[0]._id,
       price: 45.00,
