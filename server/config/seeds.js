@@ -17,52 +17,52 @@ db.once('open', async () => {
   await Product.deleteMany();
 
   const products = await Product.insertMany([
-    // {
-    //   name: 'Frog Handkerchief',
-    //   sku: '49860',
-    //   description:
-    //     'Handkerchief in lime green color. Frog print in dark green.  100% cotton',
-    //   image: 'frog2.png',
-    //   category: categories[0]._id,
-    //   price: 45.00,
-    //   quantity: 210
-    // },
-    // {
-    //   name: 'Frog Frog Hoodie',
-    //   sku: '49860',
-    //   description:
-    //     'Hoodie in solid green color. Designed for extra comfort.  100% cotton',
-    //   image: 'frog-hoodie2.png',
-    //   category: categories[0]._id,
-    //   price: 45.00,
-    //   quantity: 210
-    // },
-    // {
-    //   name: 'Frog Tee',
-    //   sku: '49860',
-    //   description:
-    //     'Round neck tee in solid grey color. Designed for extra comfort.  100% cotton',
-    //   image: 'frog-t-shirt2.png',
-    //   category: categories[0]._id,
-    //   price: 45.00,
-    //   quantity: 210
-    // },
-    // {
-    //   name: 'Frog Black Sweater',
-    //   sku: '49860',
-    //   description:
-    //     'Round neck sweater in black color. Designed for extra comfort.  100% cotton',
-    //   image: 'frog-sweater2.png',
-    //   category: categories[0]._id,
-    //   price: 45.00,
-    //   quantity: 210
-    // },
+    {
+      name: 'Frog Handkerchief',
+      sku: '49860',
+      description:
+        'Handkerchief in lime green color. Frog print in dark green.  100% cotton',
+      image: 'frog2.png',
+      category: categories[0]._id,
+      price: 45.00,
+      quantity: 210
+    },
+    {
+      name: 'Frog Frog Hoodie',
+      sku: '49860',
+      description:
+        'Hoodie in solid green color. Designed for extra comfort.  100% cotton',
+      image: 'frog-hoodie2.png',
+      category: categories[0]._id,
+      price: 45.00,
+      quantity: 210
+    },
+    {
+      name: 'Frog Tee',
+      sku: '49860',
+      description:
+        'Round neck tee in solid grey color. Designed for extra comfort.  100% cotton',
+      image: 'frog-t-shirt2.png',
+      category: categories[0]._id,
+      price: 45.00,
+      quantity: 210
+    },
+    {
+      name: 'Frog Black Sweater',
+      sku: '49860',
+      description:
+        'Round neck sweater in black color. Designed for extra comfort.  100% cotton',
+      image: 'frog-sweater2.png',
+      category: categories[0]._id,
+      price: 45.00,
+      quantity: 210
+    },
     {
       name: 'Black Tee with Squares',
       sku: '49856',
       description:
         'Round neck tee in black. Features a print design of green squares simulating paint strokes.  100% cotton',
-      image: 'black-shirt-squares',
+      image: 'black-shirt-squares.png',
       category: categories[0]._id,
       price: 55.00,
       quantity: 500
