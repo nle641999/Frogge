@@ -50,9 +50,12 @@ function Contact() {
 
   return (
     <div>
-      <br>
-      </br>
-      <h2 className='mainText'>Contact Us</h2>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <h3 className='mainText'>Contact Us</h3>
       <br>
       </br>
       <h5 className='mainText'>Hello, please enter your information to contact us.</h5>
@@ -84,7 +87,7 @@ function Contact() {
           placeholder="Enter message"
           required
         />
-        <input type="submit" className="btn btn-primary" onClick={handleFormSubmit}/>
+        <input type="submit" className="btn btn-success" onClick={handleFormSubmit}/>
       </form>
       {errorMessage && (
         <div>

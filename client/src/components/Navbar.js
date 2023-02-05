@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
 import Cart from "./Cart/Cart.js";
+import '../styles/Main.css';
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -27,11 +28,13 @@ function NavBar() {
         expanded={expand}
         fixed="top"
         expand="md"
-        className={navColour ? "sticky" : "navbar"}
+        className={"color-nav"}
       >
-        <Container>
-          <Navbar.Brand href="/" className="d-flex">
-            <img src = "../assets/logo.png" alt="logo" />
+        <Container >
+          <Navbar.Brand href="/" className="d-inline-block align-top">
+            <div className="company-name">
+            <img src ="../images/logo-dark-green-background.png" alt="logo" width="58"/> F R O G G E
+            </div>
           </Navbar.Brand>
 
           <Navbar.Toggle
