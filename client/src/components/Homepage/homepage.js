@@ -13,7 +13,8 @@ function Homepage() {
     // const { currentCategory } = state;
   
     const { loading, data } = useQuery(QUERY_ALL_PRODUCTS);
-  
+    const products = data?.products || []
+    console.log(products)
     useEffect(() => {
       if (data) {
         dispatch({
@@ -26,7 +27,7 @@ function Homepage() {
     
 return (
 <section className="homepageContainer container">
-<div className='row'>
+<div className='row justify-content-sm-center'>
 
             {state.products.map((product) => (
               <ProductItem

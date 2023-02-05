@@ -21,10 +21,10 @@ db.once('open', async () => {
       name: 'Black Tee with Squares',
       sku: '49856',
       description:
-        'Round neck tee in black. Features a print design of green squares simulating paint strokes.  100% cotton',
+        'Round neck tee in black. Features a print design of green strokes.  100% cotton',
       image: 'black-shirt-squares.png',
       category: categories[0]._id,
-      price: 55.00,
+      price: 56.00,
       quantity: 500
     },
     {
@@ -96,6 +96,46 @@ db.once('open', async () => {
       category: categories[0]._id,
       price: 45.00,
       quantity: 200
+    },
+    {
+      name: 'Frog Handkerchief',
+      sku: '49860',
+      description:
+        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
+      image: 'frog1.png',
+      category: categories[0]._id,
+      price: 45.00,
+      quantity: 210
+    },
+    {
+      name: 'Frog Hoodie',
+      sku: '49861',
+      description:
+        'Round neck tee in solid pink color. Designed for extra comfort.  100% cotton',
+      image: 'frog-hoodie.png',
+      category: categories[0]._id,
+      price: 45.00,
+      quantity: 275
+    },
+    {
+      name: 'Frog Tee',
+      sku: '49861',
+      description:
+        'Round neck tee in solid pink color. Designed for extra comfort.  100% cotton',
+      image: 'frog-t-shirt.png',
+      category: categories[0]._id,
+      price: 45.00,
+      quantity: 275
+    },
+    {
+      name: 'Frog Black Sweater',
+      sku: '49861',
+      description:
+        'Round neck tee in solid pink color. Designed for extra comfort.  100% cotton',
+      image: 'frog-sweater.png',
+      category: categories[0]._id,
+      price: 45.00,
+      quantity: 275
     }
   ]);
 

@@ -16,7 +16,8 @@ function ProductItem({item}) {
     description,
     name,
     price,
-    quantity
+    quantity,
+    image
   } = item;
 
   console.log('item in ProductItem', item)
@@ -45,7 +46,7 @@ function ProductItem({item}) {
 //   }
 
   return (
-      <div className="col-3 clothe-card">
+      <div className="col-sm-6 col-md-4 col-lg-3 clothe-card">
 
          {/* <div className="card">
              <img className="card-img-top img-fluid" src="//placehold.it/500x200" alt="Card image cap"/>
@@ -55,11 +56,14 @@ function ProductItem({item}) {
              <p className="card-text"><small className="text-muted">fasjdkkld</small></p>
              </div> */}
  <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img variant="top" src={"/images/" + item.image}/>
       <Card.Body>
-        <Card.Title>{item.name}</Card.Title>
+        <Card.Title style={{ fontWeight: 'bold' }}>{item.name}</Card.Title>
         <Card.Text>
-          {item.description}{item.sku}
+          {item.description}
+          <br></br>
+          <br></br>
+          ${item.price}.00
         </Card.Text>
         <Button variant="success">Add to Cart</Button>
       </Card.Body>
