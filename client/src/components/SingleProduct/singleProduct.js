@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import '../../styles/Main.css';
 import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../../utils/queries';
 import { useParams } from "react-router-dom";
