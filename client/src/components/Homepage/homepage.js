@@ -3,15 +3,11 @@ import ProductItem from './productItem';
 import { useStoreContext } from '../../utils/GlobalState';
 import { useQuery } from '@apollo/client';
 import { QUERY_ALL_PRODUCTS } from '../../utils/queries';
-import { Container, Row, Col } from "react-bootstrap";
 import '../../styles/home.css'
 import {UPDATE_PRODUCTS} from '../../utils/actions';
 
 function Homepage() {
-    const [state, dispatch] = useStoreContext();
-
-    // const { currentCategory } = state;
-  
+    const [state, dispatch] = useStoreContext();  
     const { loading, data } = useQuery(QUERY_ALL_PRODUCTS);
   
     useEffect(() => {
@@ -25,7 +21,7 @@ function Homepage() {
 
     
 return (
-<section className="homepageContainer container">
+<section className="homepageContainer ">
 <div className='row'>
 
             {state.products.map((product) => (
