@@ -18,6 +18,46 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
+      name: 'Frog Handkerchief',
+      sku: '49860',
+      description:
+        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
+      image: 'frog2.png',
+      category: categories[0]._id,
+      price: 45.00,
+      quantity: 210
+    },
+    {
+      name: 'Frog Frog Hoodie',
+      sku: '49860',
+      description:
+        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
+      image: 'frog-hoodie2.png',
+      category: categories[0]._id,
+      price: 45.00,
+      quantity: 210
+    },
+    {
+      name: 'Frog Tee',
+      sku: '49860',
+      description:
+        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
+      image: 'frog-t-shirt2.png',
+      category: categories[0]._id,
+      price: 45.00,
+      quantity: 210
+    },
+    {
+      name: 'Frog Black Sweater',
+      sku: '49860',
+      description:
+        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
+      image: 'frog-sweater2.png',
+      category: categories[0]._id,
+      price: 45.00,
+      quantity: 210
+    },
+    {
       name: 'Black Tee with Squares',
       sku: '49856',
       description:
@@ -96,47 +136,8 @@ db.once('open', async () => {
       category: categories[0]._id,
       price: 45.00,
       quantity: 200
-    },
-    {
-      name: 'Frog Handkerchief',
-      sku: '49860',
-      description:
-        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
-      image: 'frog2.png',
-      category: categories[0]._id,
-      price: 45.00,
-      quantity: 210
-    },
-    {
-      name: 'Frog Frog Hoodie',
-      sku: '49860',
-      description:
-        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
-      image: 'frog-hoodie2.png',
-      category: categories[0]._id,
-      price: 45.00,
-      quantity: 210
-    },
-    {
-      name: 'Frog Tee',
-      sku: '49860',
-      description:
-        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
-      image: 'frog-t-shirt2.png',
-      category: categories[0]._id,
-      price: 45.00,
-      quantity: 210
-    },
-    {
-      name: 'Frog Black Sweater',
-      sku: '49860',
-      description:
-        'Round neck tee in solid orange color. Designed for extra comfort.  100% cotton',
-      image: 'frog-sweater2.png',
-      category: categories[0]._id,
-      price: 45.00,
-      quantity: 210
     }
+    
     // {
     //   name: 'Frog Handkerchief',
     //   sku: '49860',
