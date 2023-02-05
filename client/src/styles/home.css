@@ -60,7 +60,7 @@
  }
 
  .clotheImg {
-  border-radius: 50px;
+  border-radius: 50px !important;
  }
 
  .navbar{
@@ -143,4 +143,5 @@
   justify-content: center;
   align-items: center;
   background-color: aliceblue;
+  margin: 10px;
 }
