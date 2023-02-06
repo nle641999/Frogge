@@ -1,13 +1,13 @@
-:root {
+/* :root {
   background-color: #8890b2 ;
-}
+} */
 
 .row {
    display: flex;
    flex-wrap: wrap;
    justify-content: space-evenly;
    align-items: center;
-   background-color: #8890b2;
+   background-color: white;
 }
 
 .row > div[class*='col-'] {
@@ -136,12 +136,12 @@
 .cardAll {
   border-color: black;
   border-style: solid;
-  border-radius: 25px;
+  border-radius: 15px;
   border: 2px solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: aliceblue;
+  background-color: white;
   margin: 10px;
 }
