@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../../utils/queries';
 import { useParams } from "react-router-dom";
@@ -7,7 +7,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
-import { ADD_TO_CART } from '../../utils/actions';
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import '../../styles/home.css';
 import '../../styles/singleProduct.css';
 
@@ -71,10 +71,15 @@ function SingleProduct({props}) {
           defaultValue={1}
           />
 
+
+         <Dropdown>
+        {/* <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
+
          {/* <Dropdown>
         <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
+
           Size
-        </Dropdown.Toggle>
+        </Dropdown.Toggle> */}
 
         <Dropdown.Menu variant="dark">
           <Dropdown.Item href="#/action-1">Small</Dropdown.Item>
