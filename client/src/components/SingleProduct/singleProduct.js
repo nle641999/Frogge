@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../../utils/queries';
 import { useParams } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
+import { useStoreContext } from "../../utils/GlobalState";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -11,9 +12,9 @@ import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import '../../styles/home.css';
 import '../../styles/singleProduct.css';
 
-function SingleProduct({props}) {
+function SingleProduct( item ) {
   const params = useParams();
-  const { loading, data }=useQuery(QUERY_PRODUCTS, {
+  const { loading, data } = useQuery(QUERY_PRODUCTS, {
     variables: {
       productId: params.productId
     }
@@ -24,7 +25,16 @@ function SingleProduct({props}) {
 
   const currentProduct = data?.product || {}
   console.log(currentProduct)
- 
+  const [state, dispatch] = useStoreContext()
+  const {
+    image,
+    name,
+    _id,
+    price,
+    quantity
+  } = item;
+  
+
   const addToCart = () => {
     const itemInCart = state.cart.find((cartItem) => cartItem._id === _id)
     if (itemInCart) {
@@ -49,31 +59,31 @@ function SingleProduct({props}) {
   return (
     <div className="single-product-container">
       {/* <h1 className='returnBtn'>Return to all products</h1> */}
-    <div className='workhero'>
-      {/* <a href="/" style={{ color: black }}>← Back to Products</a> */}
-      <div className='clothing-image'>
-        <img className="img-style"src={require(`../../../public/images/${currentProduct.image}`)}/>
-      </div>
-       <div className='clothing-info'style={{paddingBottom: "30px"}}>
-        <h2 className='product-name'>{currentProduct.name}
-        <p className='product-price' style={{paddingTop: "16px"}}>${currentProduct.price}.00</p></h2>
-      
-        <p className="description-text">{currentProduct.description}. 
-        <br></br>
-        <p style={{color: "grey", fontSize: "14px", paddingTop: "10px"}}>Number in Stock: {currentProduct.quantity}</p> </p>
+      <div className='workhero'>
+        {/* <a href="/" style={{ color: black }}>← Back to Products</a> */}
+        <div className='clothing-image'>
+          <img className="img-style" src={require(`../../../public/images/${currentProduct.image}`)} />
+        </div>
+        <div className='clothing-info' style={{ paddingBottom: "30px" }}>
+          <h2 className='product-name'>{currentProduct.name}
+            <p className='product-price' style={{ paddingTop: "16px" }}>${currentProduct.price}.00</p></h2>
 
-      
-      <div className='buying-info'>
-        <div className='form-ctrl'>
-        <Form.Control
-
-          className='sizing'
-          defaultValue={1}
-          />
+          <p className="description-text">{currentProduct.description}.
+            <br></br>
+            <p style={{ color: "grey", fontSize: "14px", paddingTop: "10px" }}>Number in Stock: {currentProduct.quantity}</p> </p>
 
 
-         <Dropdown>
-        {/* <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
+          <div className='buying-info'>
+            <div className='form-ctrl'>
+              <Form.Control
+
+                className='sizing'
+                defaultValue={1}
+              />
+
+
+              <Dropdown>
+                {/* <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
 
          {/* <Dropdown>
         <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
@@ -81,19 +91,19 @@ function SingleProduct({props}) {
           Size
         </Dropdown.Toggle> */}
 
-        <Dropdown.Menu variant="dark">
-          <Dropdown.Item href="#/action-1">Small</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Medium</Dropdown.Item>
-          <Dropdown.Item href="#/action-4">Large</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>  */}
-       </div> 
+                <Dropdown.Menu variant="dark">
+                  <Dropdown.Item href="#/action-1">Small</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">Medium</Dropdown.Item>
+                  <Dropdown.Item href="#/action-4">Large</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </div>
           </div>
-       <div className="d-flex">
-       <Button className="cartBtn" variant="success" onClick={addToCart}>Add to Cart</Button>
-</div>
+          <div className="d-flex">
+            <Button className="cartBtn" variant="success" onClick={addToCart}>Add to Cart</Button>
+          </div>
+        </div>
       </div>
-    </div>
     </div>
   );
 }
