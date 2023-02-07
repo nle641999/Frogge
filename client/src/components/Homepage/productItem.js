@@ -43,7 +43,7 @@ function ProductItem({item}) {
   }
 
   return (
-    <div className="col-sm-8 col-md-6 col-lg-3 clothe-card cardAll">
+    <div className="col-7 col-sm-7 col-md-4 col-lg-2 col-xl-2 clothe-card cardAll">
       <Card className="card" style={{ width: '18rem' }}>
         <Card.Img variant="top" className="clotheImg" src={process.env.PUBLIC_URL + `/images/${image}`} />
         <Link to={`/product/${_id}`}>
