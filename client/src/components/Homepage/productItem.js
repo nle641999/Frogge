@@ -46,9 +46,9 @@ function ProductItem({item}) {
 //   }
 
   return (
-<div className="col-sm-8 col-md-6 col-lg-3 clothe-card cardAll">
+<div className=" col-7 col-sm-7 col-md-4 col-lg-2 col-xl-2 clothe-card cardAll">
 
- <Card className="card"style={{ width: '18rem' }}>
+ <Card className="card"style={{ width: '16rem' }}>
       <Card.Img variant="top" className="clotheImg"src={require(`../../../public/images/${item.image}`)} />
       <Link to={`/product/${item._id}`}>
       <div className='image_overlay image_overlay_blur'>
@@ -57,16 +57,18 @@ function ProductItem({item}) {
         </div>
       </Link>
     </Card>
-    <Card.Text>
-          {item.name}
-          <br></br>
-          <br></br>
-          Sku: {item._id}
-          <br></br>
-          <br></br>
-          ${item.price}.00
+    <Card.Text style={{ marginTop: '14px'}}>
+         <Card.Title style={{ fontWeight: 'bold',
+         fontSize: '19px',
+         marginBottom: "5px" }}>{item.name}</Card.Title>
+        {/* <br></br> */}
+        {/* Sku: {item._id}
+        <br></br> */}
+        {/* <br></br> */}
+        ${item.price}.00
         </Card.Text>
         <Button variant="success">Add to Cart</Button>
+        <br></br>
       </div>
   );
 }
