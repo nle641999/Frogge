@@ -47,7 +47,7 @@ function SingleProduct({props}) {
   }
 
   return (
-    <div>
+    <div className="single-product-container">
       {/* <h1 className='returnBtn'>Return to all products</h1> */}
     <div className='workhero'>
       {/* <a href="/" style={{ color: black }}>← Back to Products</a> */}
@@ -71,7 +71,7 @@ function SingleProduct({props}) {
           defaultValue={1}
           />
 
-         <Dropdown>
+         {/* <Dropdown>
         <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
           Size
         </Dropdown.Toggle>
@@ -81,13 +81,12 @@ function SingleProduct({props}) {
           <Dropdown.Item href="#/action-2">Medium</Dropdown.Item>
           <Dropdown.Item href="#/action-4">Large</Dropdown.Item>
         </Dropdown.Menu>
-      </Dropdown> 
+      </Dropdown>  */}
        </div> 
           </div>
        <div className="d-flex">
-       <Button variant="success" onClick={addToCart}>Add to Cart</Button>
+       <Button className="cartBtn"variant="success" onClick={addToCart}>Add to Cart</Button>
 </div>
-
       </div>
     </div>
     </div>

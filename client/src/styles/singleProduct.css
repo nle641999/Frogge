@@ -3,8 +3,8 @@
 }
 .clothing-image {
     display:flex;
-    width:52%;
-    margin-top: 150px;
+    width: 52%;
+    margin-top: 100px;
 }
 
 .img-style {
@@ -19,22 +19,27 @@
     display: flex;
     flex-wrap: wrap;
     width:40%;
-    margin-top: 200px;
+    margin-top: 150px;
+    margin-left: max(2px);
 }
 
 .workhero {
-    display:flex;
+    display: flex;
     width: 100%;
     /* margin: 10px 0px 10px 0px; */
     justify-content: center;
+    align-items: top;
+    max-width: 1000px;
+}
+
+.single-product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .clothing-info h2{
     width: 100%;
-}
-
-.clothing-info {
-    margin-left: -30px;
 }
 
 .buying-info {
@@ -80,7 +85,7 @@
 .product-price {
     padding-top: -10px;
     padding-bottom: -30px;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: normal;
 }
 
@@ -96,5 +101,3 @@
 .description-text {
     padding-top: -20px;
 }
-
-
