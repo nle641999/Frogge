@@ -5,7 +5,7 @@ import { useLazyQuery } from '@apollo/client';
 import { QUERY_CHECKOUT } from '../../utils/queries.js';
 import { idbPromise } from '../../utils/helpers';
 import { useStoreContext } from '../../utils/GlobalState.js';
-import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import { ADD_MULTIPLE_TO_CART, REMOVE_FROM_CART } from '../../utils/actions';
 import { Container, Col, Row } from 'react-bootstrap';
 
 const stripePromise = loadStripe('pk_test_51MXFOQIQxvdIT6er2UoSF4oR3FFxpt80NgzPzRx9bN5ZyArev6SFBgUJH7t3GswREKYH12OGEF6LrmatzpeR09f6009qdGxJlm');
@@ -51,6 +51,15 @@ const Cart = () => {
     })
     return sum.toFixed(2);
   }
+
+  const removeFromCart = item => {
+    dispatch({
+      type: REMOVE_FROM_CART,
+      _id: item._id
+    });
+    idbPromise('cart', 'delete', { ...item });
+
+  };
 
   const handleCheckout = async () => {
     try {
@@ -102,15 +111,7 @@ const Cart = () => {
           <img className="cart-image"src={"/images/" + product.image} alt={product.name} />
           <p>{product.name}</p>
           <p>Price: ${product.price}</p>
-          {/* <label>
-            Quantity:
-            <input
-              type="number"
-              value={quantities[product.id]}
-              onChange={(e) => handleQuantityChange(product.id, e.target.value)}
-            />
-          </label> */}
-          <button onClick={() => dispatch({ type: TOGGLE_CART, productId: product.id })}>
+          <button onClick={() => removeFromCart(product)}>
             Remove from Cart
           </button>
         </div>
