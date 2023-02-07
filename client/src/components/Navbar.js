@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import { NavbarBrand } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
 import Cart from "./Cart/Cart.js";
 import '../styles/Main.css';
@@ -62,7 +64,7 @@ function NavBar() {
 
               <Nav.Item>
                 <Nav.Link onClick={() => setShowCart(true)}>
-                  <AiOutlineShoppingCart style={{ marginBottom: "2px" }} /> Cart
+                  <AiOutlineShoppingCart style={{ marginBottom: "2px" }} /> 
                 </Nav.Link>
               </Nav.Item>
             </Nav>

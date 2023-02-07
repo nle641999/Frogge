@@ -15,7 +15,7 @@ import Cart from './components/Cart/Cart.js';
 import Contact from './components/Contact/Contact.js';
 import Footer from './components/Footer.js';
 
-import "./style.css";
+import "./styles/style.css";
 import './App.css';
 
 const httpLink = createHttpLink({
