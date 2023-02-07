@@ -50,12 +50,18 @@ function ProductItem({item}) {
           <div className='image_overlay image_overlay_blur'>
             <h2 className='image_title'>{item.name}</h2>
             <p className='image_description'>{item.description}</p>
-          </div>
-        </Link>
-        <Card.Text>
-          {item.name}
-          <br />
-          ${item.price}
+        </div>
+      </Link>
+    </Card>
+    <Card.Text style={{ marginTop: '14px'}}>
+         <Card.Title style={{ fontWeight: 'bold',
+         fontSize: '19px',
+         marginBottom: "5px" }}>{item.name}</Card.Title>
+        {/* <br></br> */}
+        {/* Sku: {item._id}
+        <br></br> */}
+        <br></br>
+        ${item.price}.00
         </Card.Text>
         <Button variant="success" onClick={addToCart}>Add to Cart</Button>
       </Card>
