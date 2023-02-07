@@ -4,16 +4,20 @@ import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
-
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import '../../styles/home.css';
 function ProductItem({item}) {
 //   const [state, dispatch] = useStoreContext();
 
   const {
+    _id,
     sku,
     description,
     name,
     price,
-    quantity
+    quantity,
+    image
   } = item;
 
   console.log('item in ProductItem', item)
@@ -42,18 +46,28 @@ function ProductItem({item}) {
 //   }
 
   return (
-     <div className="container">
-     <div className="col-sm-3">
-         <div className="card">
-             <img className="card-img-top img-fluid" src="//placehold.it/500x200" alt="Card image cap"/>
-             <div className="card-block">
-                 <h4 className="card-title">{item.name}</h4>
-                 <p className="card-text">asss</p>
-             <p className="card-text"><small className="text-muted">fasjdkkld</small></p>
-             </div>
-     </div>
- </div>
-</div>
+<div className="col-sm-8 col-md-6 col-lg-3 clothe-card cardAll">
+
+ <Card className="card"style={{ width: '18rem' }}>
+      <Card.Img variant="top" className="clotheImg"src={require(`../../../public/images/${item.image}`)} />
+      <Link to={`/product/${item._id}`}>
+      <div className='image_overlay image_overlay_blur'>
+            <h2 className='image_title'>{item.name}</h2>
+            <p className='image_description'>{item.description}</p>
+        </div>
+      </Link>
+    </Card>
+    <Card.Text>
+          {item.name}
+          <br></br>
+          <br></br>
+          Sku: {item._id}
+          <br></br>
+          <br></br>
+          ${item.price}.00
+        </Card.Text>
+        <Button variant="success">Add to Cart</Button>
+      </div>
   );
 }
 

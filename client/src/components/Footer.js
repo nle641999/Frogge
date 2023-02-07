@@ -2,15 +2,16 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {AiFillGithub} from "react-icons/ai";
 import {FaUser} from "react-icons/fa";
+import "../styles/Footer.css";
 
 function Footer() {
   let date = new Date();
   let year = date.getFullYear();
   return (
-    <Container fluid className="footer">
+    <Container fluid className="border-top">
       <Row>
       <Col md="4" className="footer-copywright">
-          <h3>© Frogge Inc.</h3>
+          <h4>© Frogge Inc.</h4>
         </Col>
         <Col md="4" className="footer-copywright">
           <h3></h3>

@@ -1,0 +1,40 @@
+.border-top {
+  background-color: white;
+  bottom: 0 !important;
+  padding-top: 18px !important;
+  padding-bottom: 6px !important;
+  border-top: black;
+  margin-top: 40px;
+}
+
+.footer-copywright {
+  text-align: center !important;
+}
+
+.footer-body {
+  z-index: 1;
+  text-align: center !important;
+}
+
+@media (max-width: 767px) {
+  .footer-copywright {
+    text-align: center !important;
+  }
+
+  .footer-body {
+    text-align: right !important;
+  }
+}
+
+.footer h3 {
+  font-size: 1em;
+  color: rgb(0, 0, 0) !important;
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+
+.footer-icons {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+  padding: 1 !important;
+}

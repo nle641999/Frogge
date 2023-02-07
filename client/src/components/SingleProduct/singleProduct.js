@@ -1,72 +1,110 @@
-import React from 'react';
-import '../../styles/Main.css';
+import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from '../../utils/queries';
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
+import Form from 'react-bootstrap/Form';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import InputGroup from 'react-bootstrap/InputGroup';
+import '../../styles/home.css';
+import '../../styles/singleProduct.css';
 
-function SingleProduct() {
-  const { productId }=useParams()
+function SingleProduct({props}) {
+  const params = useParams();
   const { loading, data }=useQuery(QUERY_PRODUCTS, {
     variables: {
-      id: productId
+      productId: params.productId
     }
   })
-  const currentProduct = data?.product || {} 
-  console.log (currentProduct)
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  const currentProduct = data?.product || {}
+  console.log(currentProduct)
+  // useEffect(()=> {
+  //   if (data) {
+  //     console.log(data, 'inside useeffect')
+  //     const productInfo = data?.product || {};
+  //     currentProduct.push(productInfo)
+  //   }
+  // }, [data])
+
   return (
-  <>
-    <div className="py-5">
-      <div className="container my-1">
-        {/* <Link to="/">← Back to Products</Link> */}
-        <div className="container mt-4"></div>
-        <div className="row gx-4 gx-lg-6 align-items-center">
-          <div className="col-md-6">
-            <img className="card-img-top mb-5 mb-md-2" 
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-            />
+    <div>
+      {/* <h1 className='returnBtn'>Return to all products</h1> */}
+    <div className='workhero'>
+      {/* <div className='returnBtn'>Back to all products</div> */}
+      <div className='clothing-image'>
+        <img className="img-style"src={require(`../../../public/images/${currentProduct.image}`)}/>
+      </div>
+       <div className='clothing-info'>
+        <h1 className='product-name'>{currentProduct.name}</h1>
+        <h1 className='product-price'>${currentProduct.price}</h1>
+        <p>{currentProduct.description}</p>
+        <h2>In Stock: </h2>
+        <h2 className='quantity'>{currentProduct.quantity}</h2>
+      
+      <div className='buying-info'>
+        <div className='form-ctrl'>
+        <Form.Control
+
+          className='sizing'
+          defaultValue={1}
+          />
+
+         <Dropdown>
+        <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
+          Size
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu variant="dark">
+          <Dropdown.Item href="#/action-1">Small</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">Medium</Dropdown.Item>
+          <Dropdown.Item href="#/action-4">Large</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown> 
+       </div> 
           </div>
-          <div className="col-md-6">
-            <div className="small mb-1">{currentProduct.sku}</div>
-            <h2 className="display-6 fw-bolder">{currentProduct.name}</h2>
-            <div className="fs-5 mb-5">
-                <span>{currentProduct.price}</span>
-            </div>
-            <p className="lead">{currentProduct.description}</p>
-            <br>
-            </br>
-            <div className="d-flex">
-              <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem"/>
-              <div className="dropdown">
-                <button className="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Size
-                </button>
-                <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <button className="dropdown-item" type="button">X-Large</button>
-                  <button className="dropdown-item" type="button">Large</button>
-                  <button className="dropdown-item" type="button">Medium</button>
-                  <button className="dropdown-item" type="button">Small</button>
-                </div>
-              </div>
-            </div>
-            <br>
-            </br>
-            <div className="d-flex">
-              <button class="btn btn-success flex-shrink-0" type="button">
-                <i className="bi-cart-fill me-1"></i>
-                Add to Cart
-              </button>
-              <button className="btn btn-outline-secondary flex-shrink-0" style="margin-left: 16px" type="button">
-                <i className="bi-cart-fill me-1"></i>
-                Remove from Cart
-              </button>
-            </div>
-          </div>
-        </div>
+       <div className="d-flex">
+  <button className="btn btn-success flex-shrink-0 cartBtn" type="button">
+    <i className="bi-cart-fill me-1"></i>
+    Add to Cart
+  </button>
+  <button className="btn btn-outline-secondary flex-shrink-0 cartBtn"  type="button">
+    <i className="bi-cart-fill me-1"></i>
+    Remove from Cart
+  </button>
+</div>
+
       </div>
     </div>
-  </>
+    </div>
   );
 }
 
 export default SingleProduct;
+{/* <div className="d-flex">
+<input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" ></input>
+<div className="dropdown">
+<button className="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Size
+</button>
+<div className="dropdown-menu" aria-labelledby="dropdownMenu2">
+<button className="dropdown-item" type="button">X-Large</button>
+<button className="dropdown-item" type="button">Large</button>
+<button className="dropdown-item" type="button">Medium</button>
+<button className="dropdown-item" type="button">Small</button>
+</div>
+</div>
+</div> */}
+{/* <div className="d-flex">
+  <button className="btn btn-success flex-shrink-0" type="button">
+    <i className="bi-cart-fill me-1"></i>
+    Add to Cart
+  </button>
+  <button className="btn btn-outline-secondary flex-shrink-0" style="margin-left: 16px" type="button">
+    <i className="bi-cart-fill me-1"></i>
+    Remove from Cart
+  </button>
+</div> */}

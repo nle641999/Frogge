@@ -5,8 +5,7 @@ import { QUERY_CHECKOUT } from '../../utils/queries.js';
 import CartItem from './CartItem';
 import { useStoreContext } from '../../utils/GlobalState.js';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
-// import Auth from '../../utils/auth';
-
+import '../../styles/Cart.css';
 
 const Cart = ({showCart, setShowCart}) => {
   const [state, dispatch] = useStoreContext();
@@ -57,8 +56,8 @@ const Cart = ({showCart, setShowCart}) => {
               <CartItem key={product.id} product={product} />
             )))}
           </ul>
-          <div className="cart-footer" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <button className="btn btn-primary" onClick={handleCheckout}>
+          <div className="cart-footer">
+            <button className="btn btn-success" onClick={handleCheckout}>
               Checkout
             </button>
             <p>
