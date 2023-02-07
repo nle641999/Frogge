@@ -64,7 +64,7 @@ function ProductItem({item}) {
         {/* <br></br> */}
         {/* Sku: {item._id}
         <br></br> */}
-        {/* <br></br> */}
+        <br></br>
         ${item.price}.00
         </Card.Text>
         <Button variant="success">Add to Cart</Button>
