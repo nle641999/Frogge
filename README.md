@@ -1,4 +1,4 @@
-# Frogge Inc. ![frogge](./images/logo.png)
+# Frogge Inc. ![frogge](./client/public/images/logo-dark-green-background.png)
 
 ## Welcome to the Frogge merch website!
 Website deployed on [HEROKU!](https://frogge-e-commerce.herokuapp.com/)
@@ -28,10 +28,10 @@ THEN the user is taken to the checkout page.
 ```
 
 ### Home Page Sketch (More found in the images folder)
-![checkout](./images/home.png)
+![home](./client/public/images/home.png)
 
 ### Single Product Page Sketch (More found in the images folder)
-![single_product](./images/singleProduct.png)
+![singleProduct](./client/public/images/singleProduct.png)
 
 ### Technologies used
 - React for building the user interface and handling client-side logic.
