@@ -73,10 +73,6 @@ function SingleProduct({props}) {
     <i className="bi-cart-fill me-1"></i>
     Add to Cart
   </button>
-  <button className="btn btn-outline-secondary flex-shrink-0 cartBtn"  type="button">
-    <i className="bi-cart-fill me-1"></i>
-    Remove from Cart
-  </button>
 </div>
 
       </div>
