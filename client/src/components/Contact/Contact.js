@@ -3,6 +3,8 @@ import '../../styles/Main.css';
 import '../../styles/Contact.css';
 
 import { validateEmail } from '../../utils/helpers';
+import { Container } from 'react-bootstrap';
+
 
 function Contact() {
   const [name, setName] = useState('');
@@ -49,7 +51,10 @@ function Contact() {
   };
 
   return (
-    <div>
+    <>
+    <Container 
+     expand="md"
+    >
       <br></br>
       <br></br>
       <br></br>
@@ -94,7 +99,8 @@ function Contact() {
           <p className="error-text">{errorMessage}</p>
         </div>
       )}
-    </div>
+    </Container>
+    </>
   );
 }
 

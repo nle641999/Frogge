@@ -6,6 +6,7 @@ import { QUERY_CHECKOUT } from '../../utils/queries.js';
 import { idbPromise } from '../../utils/helpers';
 import { useStoreContext } from '../../utils/GlobalState.js';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import { Container, Col, Row } from 'react-bootstrap';
 
 const stripePromise = loadStripe('pk_test_51MXFOQIQxvdIT6er2UoSF4oR3FFxpt80NgzPzRx9bN5ZyArev6SFBgUJH7t3GswREKYH12OGEF6LrmatzpeR09f6009qdGxJlm');
 
@@ -87,10 +88,18 @@ const Cart = () => {
   };
 
   return (
-    <div>
+    <Container>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <div className="row">
+      {console.log(state.cart)}
       {state.cart.map((product) => (
-        <div key={product._id}>
-          <img src={product.image} alt={product.name} />
+        <div className="col-7 col-sm-7 col-md-4 col-lg-2 col-xl-2">
+        <div className="card" key={product._id}>
+          <img className="cart-image"src={"/images/" + product.image} alt={product.name} />
           <p>{product.name}</p>
           <p>Price: ${product.price}</p>
           {/* <label>
@@ -105,10 +114,14 @@ const Cart = () => {
             Remove from Cart
           </button>
         </div>
+        </div>
       ))}
+    </div>
       <p>Subtotal: ${calculateTotal()}</p>
       <button onClick={handleCheckout}>Checkout</button>
-    </div>
+
+
+    </Container>
   );
 };
 
