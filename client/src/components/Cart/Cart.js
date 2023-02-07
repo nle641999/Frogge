@@ -6,6 +6,7 @@ import { QUERY_CHECKOUT } from '../../utils/queries.js';
 import { idbPromise } from '../../utils/helpers';
 import { useStoreContext } from '../../utils/GlobalState.js';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import { Container } from 'react-bootstrap';
 
 const stripePromise = loadStripe('pk_test_51MXFOQIQxvdIT6er2UoSF4oR3FFxpt80NgzPzRx9bN5ZyArev6SFBgUJH7t3GswREKYH12OGEF6LrmatzpeR09f6009qdGxJlm');
 
@@ -87,7 +88,12 @@ const Cart = () => {
   };
 
   return (
-    <div>
+    <Container>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       {state.cart.map((product) => (
         <div key={product._id}>
           <img src={product.image} alt={product.name} />
@@ -108,7 +114,7 @@ const Cart = () => {
       ))}
       <p>Subtotal: ${calculateTotal()}</p>
       <button onClick={handleCheckout}>Checkout</button>
-    </div>
+    </Container>
   );
 };
 
