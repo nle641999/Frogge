@@ -38,10 +38,11 @@ function SingleProduct({props}) {
       <div className='clothing-image'>
         <img className="img-style"src={require(`../../../public/images/${currentProduct.image}`)}/>
       </div>
-       <div className='clothing-info'>
-        <h1 className='product-name'>{currentProduct.name}</h1>
-        <h4 className='product-price'>${currentProduct.price}.00</h4>
-        <p>{currentProduct.description}. 
+       <div className='clothing-info'style={{paddingBottom: "30px"}}>
+        <h2 className='product-name'>{currentProduct.name}
+        <p className='product-price' style={{paddingTop: "16px"}}>${currentProduct.price}.00</p></h2>
+      
+        <p className="description-text">{currentProduct.description}. 
         <br></br>
         <p style={{color: "grey", fontSize: "14px", paddingTop: "10px"}}>Number in Stock: {currentProduct.quantity}</p> </p>
 

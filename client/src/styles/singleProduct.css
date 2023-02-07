@@ -29,12 +29,12 @@
     justify-content: center;
 }
 
-.clothing-info h1{
+.clothing-info h2{
     width: 100%;
 }
 
-.clothing-info h2{
-    width: 147px;
+.clothing-info {
+    margin-left: -30px;
 }
 
 .buying-info {
@@ -78,8 +78,10 @@
 }
 
 .product-price {
-    padding-top: -30px;
+    padding-top: -10px;
     padding-bottom: -30px;
+    font-size: 23px;
+    font-weight: normal;
 }
 
 .in-stock, .quantity {
@@ -89,6 +91,10 @@
 
 .product-name {
     font-weight: bold;
+}
+
+.description-text {
+    padding-top: -20px;
 }
 
 
