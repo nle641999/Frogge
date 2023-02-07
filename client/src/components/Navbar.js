@@ -74,7 +74,7 @@ function NavBar() {
         </Container>
       </Navbar>
 
-      <Cart showCart={showCart} setShowCart={setShowCart} />
+    
     </>
   );
 }

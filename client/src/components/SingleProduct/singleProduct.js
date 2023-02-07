@@ -6,6 +6,8 @@ import Form from 'react-bootstrap/Form';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import InputGroup from 'react-bootstrap/InputGroup';
+import Button from 'react-bootstrap/Button';
+import { ADD_TO_CART } from '../../utils/actions';
 import '../../styles/home.css';
 import '../../styles/singleProduct.css';
 
@@ -22,13 +24,27 @@ function SingleProduct({props}) {
 
   const currentProduct = data?.product || {}
   console.log(currentProduct)
-  // useEffect(()=> {
-  //   if (data) {
-  //     console.log(data, 'inside useeffect')
-  //     const productInfo = data?.product || {};
-  //     currentProduct.push(productInfo)
-  //   }
-  // }, [data])
+ 
+  const addToCart = () => {
+    const itemInCart = state.cart.find((cartItem) => cartItem._id === _id)
+    if (itemInCart) {
+      dispatch({
+        type: UPDATE_CART_QUANTITY,
+        _id: _id,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      });
+      idbPromise('cart', 'put', {
+        ...itemInCart,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      });
+    } else {
+      dispatch({
+        type: ADD_TO_CART,
+        product: { ...item, purchaseQuantity: 1 }
+      });
+      idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
+    }
+  }
 
   return (
     <div>
@@ -69,10 +85,7 @@ function SingleProduct({props}) {
        </div> 
           </div>
        <div className="d-flex">
-  <button className="btn btn-success flex-shrink-0 cartBtn" type="button">
-    <i className="bi-cart-fill me-1"></i>
-    Add to Cart
-  </button>
+       <Button variant="success" onClick={addToCart}>Add to Cart</Button>
 </div>
 
       </div>

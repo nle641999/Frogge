@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { loadStripe } from '@stripe/stripe-js';
 import { useLazyQuery } from '@apollo/client';
 import { QUERY_CHECKOUT } from '../../utils/queries.js';
+import { idbPromise } from '../../utils/helpers';
 import { useStoreContext } from '../../utils/GlobalState.js';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 
@@ -24,6 +25,16 @@ const Cart = () => {
     stripePromise.then(setStripe);
   }, []);
 
+  useEffect(() => {
+    async function getCart() {
+      const cart = await idbPromise('cart', 'get');
+      dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
+    };
+    if (!state.cart.length) {
+      getCart();
+    }
+  }, [state.cart.length, dispatch])
+
   const handleQuantityChange = (id, value) => {
     setQuantities({ ...quantities, [id]: value });
     dispatch({
@@ -32,10 +43,13 @@ const Cart = () => {
     });
   };
 
-  const subtotal = state.cart.reduce(
-    (acc, product) => acc + product.price * quantities[product.id],
-    0
-  );
+  function calculateTotal() {
+    let sum = 0
+    state.cart.forEach(item => {
+      sum += item.price * item.purchaseQuantity;
+    })
+    return sum.toFixed(2);
+  }
 
   const handleCheckout = async () => {
     try {
@@ -75,7 +89,7 @@ const Cart = () => {
   return (
     <div>
       {state.cart.map((product) => (
-        <div key={product.id}>
+        <div key={product._id}>
           <img src={product.image} alt={product.name} />
           <p>{product.name}</p>
           <p>Price: ${product.price}</p>
@@ -92,7 +106,7 @@ const Cart = () => {
           </button>
         </div>
       ))}
-      <p>Subtotal: ${subtotal}</p>
+      <p>Subtotal: ${calculateTotal()}</p>
       <button onClick={handleCheckout}>Checkout</button>
     </div>
   );

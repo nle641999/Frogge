@@ -11,15 +11,15 @@ import '../../styles/home.css';
 function ProductItem({item}) {
   const [state, dispatch] = useStoreContext();
 
-  // const {
-  //   _id,
-  //   sku,
-  //   description,
-  //   name,
-  //   price,
-  //   quantity,
-  //   image
-  // } = item;
+  const {
+    _id,
+    sku,
+    description,
+    name,
+    price,
+    quantity,
+    image
+  } = item;
 
   const addToCart = () => {
     const itemInCart = state.cart.find((cartItem) => cartItem._id === _id)
@@ -45,26 +45,25 @@ function ProductItem({item}) {
   return (
     <div className="col-sm-8 col-md-6 col-lg-3 clothe-card cardAll">
       <Card className="card" style={{ width: '18rem' }}>
-        <Card.Img variant="top" className="clotheImg" src={process.env.PUBLIC_URL + `/images/${item.image}`} />
-        <Link to={`/product/${item._id}`}>
+        <Card.Img variant="top" className="clotheImg" src={process.env.PUBLIC_URL + `/images/${image}`} />
+        <Link to={`/product/${_id}`}>
           <div className='image_overlay image_overlay_blur'>
-            <h2 className='image_title'>{item.name}</h2>
-            <p className='image_description'>{item.description}</p>
+            <h2 className='image_title'>{name}</h2>
+            <p className='image_description'>{description}</p>
         </div>
       </Link>
     </Card>
     <Card.Text style={{ marginTop: '14px'}}>
          <Card.Title style={{ fontWeight: 'bold',
          fontSize: '19px',
-         marginBottom: "5px" }}>{item.name}</Card.Title>
+         marginBottom: "5px" }}>{name}</Card.Title>
         {/* <br></br> */}
         {/* Sku: {item._id}
         <br></br> */}
         <br></br>
-        ${item.price}.00
+        ${price}.00
         </Card.Text>
         <Button variant="success" onClick={addToCart}>Add to Cart</Button>
-      </Card>
     </div>
   );
 }
