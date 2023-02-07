@@ -34,16 +34,17 @@ function SingleProduct({props}) {
     <div>
       {/* <h1 className='returnBtn'>Return to all products</h1> */}
     <div className='workhero'>
-      {/* <div className='returnBtn'>Back to all products</div> */}
+      {/* <a href="/" style={{ color: black }}>← Back to Products</a> */}
       <div className='clothing-image'>
         <img className="img-style"src={require(`../../../public/images/${currentProduct.image}`)}/>
       </div>
        <div className='clothing-info'>
         <h1 className='product-name'>{currentProduct.name}</h1>
-        <h1 className='product-price'>${currentProduct.price}</h1>
-        <p>{currentProduct.description}</p>
-        <h2>In Stock: </h2>
-        <h2 className='quantity'>{currentProduct.quantity}</h2>
+        <h4 className='product-price'>${currentProduct.price}.00</h4>
+        <p>{currentProduct.description}. 
+        <br></br>
+        <p style={{color: "grey", fontSize: "14px", paddingTop: "10px"}}>Number in Stock: {currentProduct.quantity}</p> </p>
+
       
       <div className='buying-info'>
         <div className='form-ctrl'>

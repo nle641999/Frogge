@@ -21,7 +21,7 @@ function Homepage() {
 
     
 return (
-<section className="homepageContainer ">
+<section className="homepageContainer">
 <div className='row'>
 
             {state.products.map((product) => (
