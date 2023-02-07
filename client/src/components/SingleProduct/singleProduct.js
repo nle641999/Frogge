@@ -85,7 +85,7 @@ function SingleProduct({props}) {
        </div> 
           </div>
        <div className="d-flex">
-       <Button className="cartBtn"variant="success" onClick={addToCart}>Add to Cart</Button>
+       <Button className="cartBtn" variant="success" onClick={addToCart}>Add to Cart</Button>
 </div>
       </div>
     </div>
