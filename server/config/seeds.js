@@ -28,7 +28,7 @@ db.once('open', async () => {
       quantity: 210
     },
     {
-      name: 'Frog Frog Hoodie',
+      name: 'Frog Green Hoodie',
       sku: '49860',
       description:
         'Hoodie in solid green color. Designed for extra comfort.  100% cotton',
@@ -38,7 +38,7 @@ db.once('open', async () => {
       quantity: 210
     },
     {
-      name: 'Frog Tee',
+      name: 'Frog Grey Tee',
       sku: '49860',
       description:
         'Round neck tee in solid grey color. Designed for extra comfort.  100% cotton',

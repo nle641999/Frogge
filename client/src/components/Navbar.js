@@ -30,7 +30,7 @@ function NavBar() {
         expand="md"
         className={"color-nav"}
       >
-        <Container >
+        <Container>
           <Navbar.Brand href="/" className="d-inline-block align-top">
             <div className="company-name">
             <img src ="../images/logo-dark-green-background.png" alt="logo" width="58"/> F R O G G E
