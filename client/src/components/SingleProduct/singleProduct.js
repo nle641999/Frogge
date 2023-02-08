@@ -48,9 +48,8 @@ function SingleProduct({props}) {
 
   return (
     <div className="single-product-container">
-      {/* <h1 className='returnBtn'>Return to all products</h1> */}
+     {/* <a href="/" style={{ color: black }}>← Back to Products</a> */}
     <div className='workhero'>
-      {/* <a href="/" style={{ color: black }}>← Back to Products</a> */}
       <div className='clothing-image'>
         <img className="img-style"src={require(`../../../public/images/${currentProduct.image}`)}/>
       </div>
@@ -71,7 +70,6 @@ function SingleProduct({props}) {
           defaultValue={1}
           />
 
-
          <Dropdown>
         {/* <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
 
@@ -86,7 +84,7 @@ function SingleProduct({props}) {
           <Dropdown.Item href="#/action-2">Medium</Dropdown.Item>
           <Dropdown.Item href="#/action-4">Large</Dropdown.Item>
         </Dropdown.Menu>
-      </Dropdown>  */}
+      </Dropdown> 
        </div> 
           </div>
        <div className="d-flex">

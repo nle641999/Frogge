@@ -102,3 +102,11 @@
 .description-text {
     padding-top: -20px;
 }
+
+@media screen and (max-width: 600px) {
+    .clothing-info {
+      display: flex;
+      flex-wrap: wrap;
+      /* justify-content: center; */
+    }
+  }
