@@ -118,7 +118,7 @@ const Cart = () => {
       {console.log(state.cart)}
       {state.cart.map((product) => (
         <div className="col-7 col-sm-7 col-md-4 col-lg-2 col-xl-2">
-        <div className="card" key={product._id}>
+        <div className="card cardCart" key={product._id}>
           <img className="cart-image"src={"/images/" + product.image} alt={product.name} />
           <p className="product-name">{product.name}</p>
           <p>Price: ${product.price}</p>

@@ -5,12 +5,13 @@ import { useParams } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import { useStoreContext } from "../../utils/GlobalState";
 import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import InputGroup from 'react-bootstrap/InputGroup';
+import { idbPromise } from "../../utils/helpers";
 import Button from 'react-bootstrap/Button';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import '../../styles/home.css';
 import '../../styles/singleProduct.css';
+// import DropdownButton from 'react-bootstrap/DropdownButton';
+// import InputGroup from 'react-bootstrap/InputGroup';
 
 function SingleProduct( item ) {
   const params = useParams();
@@ -24,14 +25,17 @@ function SingleProduct( item ) {
   }
 
   const currentProduct = data?.product || {}
-  console.log(currentProduct)
+  // console.log(currentProduct)
   const [state, dispatch] = useStoreContext()
+  
   const {
-    image,
-    name,
     _id,
+    sku,
+    description,
+    name,
     price,
-    quantity
+    quantity,
+    image
   } = item;
   
 
