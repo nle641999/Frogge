@@ -4,6 +4,7 @@ import { idbPromise } from '../../utils/helpers';
 import { useStoreContext } from '../../utils/GlobalState.js';
 import { ADD_MULTIPLE_TO_CART, REMOVE_FROM_CART } from '../../utils/actions';
 import { Container, Col, Row } from 'react-bootstrap';
+import '../../styles/Cart.css';
 
 const stripePromise = loadStripe('pk_test_51MXFOQIQxvdIT6er2UoSF4oR3FFxpt80NgzPzRx9bN5ZyArev6SFBgUJH7t3GswREKYH12OGEF6LrmatzpeR09f6009qdGxJlm');
 
@@ -12,14 +13,15 @@ const Cart = () => {
   const [checkout, setCheckout] = useState(null);
   const [error, setError] = useState(null);
   const [state, dispatch] = useStoreContext();
+
   const [isLoading, setLoading] = useState(true);
 
   React.useEffect(() => {
     stripePromise.then(value => {
       setStripe(value);
     });
-  }, []);
 
+  }, []);
   useEffect(() => {
     async function getCart() {
       const cart = await idbPromise('cart', 'get');
@@ -107,8 +109,7 @@ const Cart = () => {
   // };
 
   return (
-    <Container>
-      <br></br>
+    <>
       <br></br>
       <br></br>
       <br></br>
@@ -119,9 +120,19 @@ const Cart = () => {
         <div className="col-7 col-sm-7 col-md-4 col-lg-2 col-xl-2">
         <div className="card" key={product._id}>
           <img className="cart-image"src={"/images/" + product.image} alt={product.name} />
-          <p>{product.name}</p>
+          <p className="product-name">{product.name}</p>
           <p>Price: ${product.price}</p>
-          <button onClick={() => removeFromCart(product)}>
+
+          {/* <label>
+            Quantity:
+            <input
+              type="number"
+              value={quantities[product.id]}
+              onChange={(e) => handleQuantityChange(product.id, e.target.value)}
+            />
+          </label> */}
+          <button className="btn btn-danger" onClick={() => removeFromCart(product)}>
+
             Remove from Cart
           </button>
         </div>
@@ -129,11 +140,10 @@ const Cart = () => {
       ))}
     </div>
       <p>Subtotal: ${calculateTotal()}</p>
-      <button onClick={handleCheckout}>Checkout</button>
+      <button className="btn btn-success" onClick={handleCheckout}>Checkout</button>
 
 
-    </Container>
+    </>
   );
 };
-
 export default Cart;

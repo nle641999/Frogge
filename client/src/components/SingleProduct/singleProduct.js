@@ -58,20 +58,18 @@ function SingleProduct( item ) {
 
   return (
     <div className="single-product-container">
-      {/* <h1 className='returnBtn'>Return to all products</h1> */}
-      <div className='workhero'>
-        {/* <a href="/" style={{ color: black }}>← Back to Products</a> */}
-        <div className='clothing-image'>
-          <img className="img-style" src={require(`../../../public/images/${currentProduct.image}`)} />
-        </div>
-        <div className='clothing-info' style={{ paddingBottom: "30px" }}>
-          <h2 className='product-name'>{currentProduct.name}
-            <p className='product-price' style={{ paddingTop: "16px" }}>${currentProduct.price}.00</p></h2>
-
-          <p className="description-text">{currentProduct.description}.
-            <br></br>
-            <p style={{ color: "grey", fontSize: "14px", paddingTop: "10px" }}>Number in Stock: {currentProduct.quantity}</p> </p>
-
+     {/* <a href="/" style={{ color: black }}>← Back to Products</a> */}
+    <div className='workhero'>
+      <div className='clothing-image'>
+        <img className="img-style"src={require(`../../../public/images/${currentProduct.image}`)}/>
+      </div>
+       <div className='clothing-info'style={{paddingBottom: "30px"}}>
+        <h2 className='product-name'>{currentProduct.name}
+        <p className='product-price' style={{paddingTop: "16px"}}>${currentProduct.price}.00</p></h2>
+      
+        <p className="description-text">{currentProduct.description}. 
+        <br></br>
+        <p style={{color: "grey", fontSize: "14px", paddingTop: "10px"}}>Number in Stock: {currentProduct.quantity}</p> </p>
 
           <div className='buying-info'>
             <div className='form-ctrl'>
@@ -81,9 +79,8 @@ function SingleProduct( item ) {
                 defaultValue={1}
               />
 
-
-              <Dropdown>
-                {/* <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
+         <Dropdown>
+        {/* <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
 
          {/* <Dropdown>
         <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
@@ -91,13 +88,14 @@ function SingleProduct( item ) {
           Size
         </Dropdown.Toggle> */}
 
-                <Dropdown.Menu variant="dark">
-                  <Dropdown.Item href="#/action-1">Small</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">Medium</Dropdown.Item>
-                  <Dropdown.Item href="#/action-4">Large</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            </div>
+
+        <Dropdown.Menu variant="dark">
+          <Dropdown.Item href="#/action-1">Small</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">Medium</Dropdown.Item>
+          <Dropdown.Item href="#/action-4">Large</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown> 
+       </div> 
           </div>
           <div className="d-flex">
             <Button className="cartBtn" variant="success" onClick={addToCart}>Add to Cart</Button>

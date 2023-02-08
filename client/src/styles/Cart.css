@@ -8,15 +8,12 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .cart-close-button:hover {
   color: #00bfff;
 }
-
 .cart-close-button:active {
   color: #0077be;
 }
-
 .cart-preview {
   background-color: white;
   box-shadow: 0 0 10px black;
@@ -30,7 +27,6 @@
   top: 0;
   right: 0;
 }
-
 .cart-header .cart-close {
   position: absolute;
   top: 0;
@@ -40,6 +36,11 @@
   cursor: pointer;
 }
 
-.cart-image {
+.product-name {
+  font-weight: bold;
+}
 
+.card {
+  border-radius: 10px !important;
+  border: none !important;
 }
